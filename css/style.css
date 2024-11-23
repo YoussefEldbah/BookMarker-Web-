@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1.title {
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+h1.title::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #AC6CFF;
+    bottom: -5px;
+    left: 25%;
+    animation: slideIn 1s ease-in-out;
+}
+
+h2.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ccc;
+}
+
+.form-container {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.form-control {
+    border: 1px solid #AC6CFF;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 8px #AC6CFF;
+    border-color: #AC6CFF;
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, #AC6CFF, #6C8EFF);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(172, 108, 255, 0.5);
+}
+
+/* Styling for Action Buttons (Edit, Delete, View) */
+.btn-action {
+    padding: 6px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background 0.3s, transform 0.3s ease;
+    color: #fff;
+    border: none;
+}
+
+.btn-edit {
+    background-color: #FF6B6B;
+}
+
+.btn-edit:hover {
+    background-color: #D84D4D;
+    transform: scale(1.05);
+}
+
+.btn-delete {
+    background-color: #FF4F5C;
+}
+
+.btn-delete:hover {
+    background-color: #D13C3F;
+    transform: scale(1.05);
+}
+
+.btn-view {
+    background-color: #28a745;
+}
+
+.btn-view:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.table-container {
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #333B69;
+}
+
+thead th {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+tbody tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.title {
+        font-size: 2rem;
+    }
+
+    h2.subtitle {
+        font-size: 1.2rem;
+    }
+
+    .btn-submit {
+        padding: 8px 20px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.title {
+        font-size: 1.5rem;
+    }
+
+    h2.subtitle {
+        font-size: 1rem;
+    }
+
+    .btn-submit {
+        padding: 5px 15px;
+    }
+
+    table {
+        font-size: 0.7rem;
+    }
+}
